@@ -4,8 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f7dcbe"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="serif"
+        android:text="Bears. Beets. Quotes"
+        android:textColor="#5b1b2b"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="..................."
+        tools:text="there is a quote from guess who"
+        android:textColor="#be4e4d"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="serif-monospace"
+        android:id="@+id/quote_tv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quote_tv"
+        android:text=".........."
+        tools:text="i said it"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginTop="24sp"
+        android:fontFamily="serif-monospace"
+        android:id="@+id/author_tv"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#5b1b2b"
+        android:id="@+id/next_btn"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progress_bar"
+        android:visibility="gone"/>
 
 </RelativeLayout>
