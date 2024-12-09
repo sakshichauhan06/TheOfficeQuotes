@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#f7dcbe"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,9 +16,20 @@
         android:layout_marginTop="16dp"
         android:fontFamily="serif"
         android:text="Bears. Beets. Quotes"
-        android:textColor="#5b1b2b"
+        android:textColor="@color/black"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:id="@+id/app_header"/>
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/app_header"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_margin="64sp"
+        android:scaleType="centerCrop"
+        android:id="@+id/character_profile_picture"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -26,10 +37,10 @@
         android:layout_centerInParent="true"
         android:text="..................."
         tools:text="there is a quote from guess who"
-        android:textColor="#be4e4d"
+        android:textColor="@color/dark_grey"
         android:textStyle="bold"
         android:gravity="center"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:fontFamily="serif-monospace"
         android:id="@+id/quote_tv"/>
 
@@ -53,7 +64,8 @@
         android:text="Next"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#5b1b2b"
+        android:layout_margin="14sp"
+        android:backgroundTint="@color/black"
         android:id="@+id/next_btn"/>
 
     <ProgressBar
