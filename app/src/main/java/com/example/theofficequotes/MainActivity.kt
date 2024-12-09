@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                 val response = RetrofitInstance.quoteApi.getRandomQuote()
                 runOnUiThread {
                     setInProgress(false)
-                    response.body()?.first()?.let {
+                    response.body()?.let {
                         setUI(it)
                     }
                 }
