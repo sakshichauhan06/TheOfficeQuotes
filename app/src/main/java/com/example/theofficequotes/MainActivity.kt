@@ -49,10 +49,9 @@ class MainActivity : AppCompatActivity() {
         binding.quoteTv.text = quote.quote
         binding.authorTv.text = quote.character
 
-        // Log the URL for debugging
+        // Log for Image URL debugging
         Log.d("ImageLoading", "Image URL: ${quote.character_avatar_url}")
 
-        // Add null and empty checks
         if (!quote.character_avatar_url.isNullOrEmpty()) {
             Glide.with(this)
                 .load(quote.character_avatar_url)
@@ -60,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 .error(com.google.android.material.R.drawable.mtrl_ic_error)
                 .into(binding.characterProfilePicture)
         } else {
-            // Optional: Set a default image if URL is empty
+            // If the Image url is empty
             binding.characterProfilePicture.setImageResource(R.drawable.ic_launcher_background)
             Toast.makeText(this, "No image URL available", Toast.LENGTH_SHORT).show()
         }
