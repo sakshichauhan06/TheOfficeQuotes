@@ -50,12 +50,12 @@ class MainActivity : AppCompatActivity() {
         binding.authorTv.text = quote.character
 
         // Log the URL for debugging
-        Log.d("ImageLoading", "Image URL: ${quote.characterAvatarUrl}")
+        Log.d("ImageLoading", "Image URL: ${quote.character_avatar_url}")
 
         // Add null and empty checks
-        if (!quote.characterAvatarUrl.isNullOrEmpty()) {
+        if (!quote.character_avatar_url.isNullOrEmpty()) {
             Glide.with(this)
-                .load(quote.characterAvatarUrl)
+                .load(quote.character_avatar_url)
                 .placeholder(R.drawable.ic_launcher_background)
                 .error(com.google.android.material.R.drawable.mtrl_ic_error)
                 .into(binding.characterProfilePicture)

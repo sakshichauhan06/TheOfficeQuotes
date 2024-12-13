@@ -4,5 +4,5 @@ data class QuoteModel(
     val id: Long,
     val character: String,
     val quote: String,
-    val characterAvatarUrl: String,
+    val character_avatar_url: String,
 )
