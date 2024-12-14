@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/homemade_apple_regular"
         android:text="Bears. Beets. Quotes"
         android:textColor="@color/black"
@@ -27,25 +27,25 @@
         android:layout_below="@+id/app_header"
         android:layout_centerInParent="true"
         android:src="@drawable/ic_launcher_background"
-        android:layout_margin="64sp"
+        android:layout_margin="36sp"
         android:scaleType="centerCrop"
         android:id="@+id/character_profile_picture"/>
 
     <TextView
+        android:id="@+id/quote_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="..................."
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
         android:layout_marginTop="36dp"
-        tools:text="there is a quote from guess who"
-        android:textColor="@color/dark_grey"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="22sp"
+        android:layout_marginRight="24dp"
         android:fontFamily="@font/raleway"
-        android:id="@+id/quote_tv"/>
+        android:gravity="center"
+        android:text="..................."
+        android:textColor="@color/dark_grey"
+        android:fontVariationSettings="'wght' 100"
+        android:textSize="22sp"
+        tools:text="there is a quote from guess who" />
 
     <TextView
         android:layout_width="match_parent"
