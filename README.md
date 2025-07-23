@@ -1,6 +1,9 @@
-// BearBeatsQuotes
+TheOfficeQuotes
 
-The Office Quotes 📱🎬
+Bears, Beets, Quotes 🏢
+<p align="center">
+  <img src="media/bears_beets_quotes.jpg" alt="Notes App Logo" width="280" />
+</p>
 <p align="center">
   <img src="media/the_office_01.jpg" alt="Notes App Logo" width="280" />
 </p>
@@ -20,14 +23,9 @@ Simple UI with a Next button to get another quote instantly.
 
 Error handling with meaningful messages.
 
-📸 Screenshots
-Quote Screen	Loading State
-<img src="media/screenshot1.png" width="300"/>	<img src="media/screenshot2.png" width="300"/>
-
-(Add your screenshots to the media/ folder in your repo.)
-
 🎥 App Demo
 <p align="center"> <img src="media/office_quotes_demo.gif" alt="App Demo" width="250"/> </p>
+
 🛠️ Tech Stack
 Kotlin for Android development
 
