@@ -7,8 +7,9 @@ Bears, Beets, Quotes 🏢
 <p align="center">
   <img src="media/the_office_01.jpg" alt="Notes App Logo" width="280" />
 </p>
-</p>A fun and simple Android app that brings you random quotes from your favorite TV show, The Office 🏢.
-Each quote comes with the character's profile image for an immersive fan experience!
+<p>A fun and simple Android app that brings you random quotes from your favorite TV show, The Office 🏢.
+Each quote comes with the character's profile image for an immersive fan experience! 
+</p>
 
 ✨ Features
 Fetches random quotes from The Office via a REST API using Retrofit.
