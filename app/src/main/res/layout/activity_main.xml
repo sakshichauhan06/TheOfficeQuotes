@@ -26,7 +26,7 @@
         android:layout_height="180dp"
         android:layout_below="@+id/app_header"
         android:layout_centerInParent="true"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@mipmap/ic_wait"
         android:layout_margin="36sp"
         android:scaleType="centerCrop"
         android:id="@+id/character_profile_picture"/>
