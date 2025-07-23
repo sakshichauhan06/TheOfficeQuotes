@@ -24,7 +24,7 @@ Simple UI with a Next button to get another quote instantly.
 Error handling with meaningful messages.
 
 🎥 App Demo
-<p align="center"> <img src="media/office_quotes_demo.gif" alt="App Demo" width="250"/> </p>
+<p align="center"> <img src="media/the_office_demo.gif" alt="App Demo" width="250"/> </p>
 
 🛠️ Tech Stack
 Kotlin for Android development
