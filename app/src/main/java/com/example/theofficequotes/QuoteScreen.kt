@@ -3,12 +3,17 @@ package com.example.theofficequotes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -22,6 +27,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,9 +43,9 @@ fun QuoteScreen(viewModel: QuoteViewModel) {
 
     Scaffold(
         topBar = {
-            TopAppBar(
+            CenterAlignedTopAppBar(
                 title = { Text(
-                    text = "Bear. Beets. Quotes",
+                    text = "Bear. Beets. Quotes.",
                     style = MaterialTheme.typography.titleMedium,
                     color = Color.White
                 ) },
@@ -56,13 +63,14 @@ fun QuoteScreen(viewModel: QuoteViewModel) {
                 .padding(paddingValues) // applies padding from the scaffold
                 .padding(horizontal = 24.dp, vertical = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
         ) {
             // show the loading indicator when fetching the data
             if (uiState.isLoading) {
-                CircularProgressIndicator(modifier = Modifier.size(50.dp))
-                Spacer(Modifier.height(32.dp))
+                CircularProgressIndicator(modifier = Modifier.size(32.dp))
+                Spacer(Modifier.height(12.dp))
             }
+
+            Spacer(Modifier.height(32.dp))
 
             // Character Image
             CharacterImage(
@@ -73,8 +81,8 @@ fun QuoteScreen(viewModel: QuoteViewModel) {
 
             // Quote Text
             Text(
-                text = if (uiState.isLoading) "Loading..." else "\"${uiState.quoteText}\"",
-                style = MaterialTheme.typography.bodyLarge,
+                text = if (uiState.isLoading) "Loading..." else uiState.quoteText,
+                style = MaterialTheme.typography.bodySmall,
                 textAlign = TextAlign.Center,
                 modifier = Modifier.padding(horizontal = 8.dp),
                 color = if (uiState.isError) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface
@@ -84,19 +92,31 @@ fun QuoteScreen(viewModel: QuoteViewModel) {
 
             // Character Name
             Text(
-                text = "-${uiState.characterName}",
-                style = MaterialTheme.typography.bodyLarge,
+                text = "- ${uiState.characterName}",
+                style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.align(Alignment.End)
             )
 
             Spacer(Modifier.height(48.dp))
 
+            Spacer(modifier = Modifier.weight(1f))
+
             // Next Button
             Button(
                 onClick = viewModel::fetchRandomQuote,
+                modifier = Modifier
+                    .width(120.dp)
+                    .height(60.dp)
+                    .padding(bottom = 8.dp),
+                shape = RoundedCornerShape(2.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Blue),
                 enabled = !uiState.isLoading // disable the button while loading
             ) {
-                Text("Next")
+                Text(
+                    text = "Next",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color.White
+                )
             }
         }
     }
