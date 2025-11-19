@@ -36,7 +36,7 @@ fun TheOfficeQuotesTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-//        typography = Typography, // You need to define Typography in Type.kt
+        typography = Typography, // You need to define Typography in Type.kt
         content = content
     )
 }
