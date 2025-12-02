@@ -2,7 +2,7 @@ TheOfficeQuotes
 
 Bears, Beets, Quotes 🏢
 <p align="center">
-  <img src="media/bears_beets_quotes.jpg" alt="Notes App Logo" width="280" />
+  <img src="media/logo.jpg" alt="Notes App Logo" width="280" />
 </p>
 <p align="center">
   <img src="media/the_office_01.jpg" alt="Notes App Logo" width="280" />
@@ -25,7 +25,7 @@ Simple UI with a Next button to get another quote instantly.
 Error handling with meaningful messages.
 
 🎥 App Demo
-<p align="center"> <img src="media/the_office_demo.gif" alt="App Demo" width="250"/> </p>
+<p align="center"> <img src="media/demo.gif" alt="App Demo" width="250"/> </p>
 
 🛠️ Tech Stack
 Kotlin for Android development
